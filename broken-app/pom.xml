@@ -14,7 +14,7 @@
 	<name>broken-app</name>
 	<description>Team HU Hackaton</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
