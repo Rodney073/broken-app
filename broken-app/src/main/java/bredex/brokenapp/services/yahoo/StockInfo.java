@@ -1,10 +1,14 @@
-package bredex.brokenapp.services;
+package bredex.brokenapp.services.yahoo;
+
 
 import java.io.IOException;
+
+import org.springframework.stereotype.Service;
 
 import yahoofinance.Stock;
 import yahoofinance.YahooFinance;
 
+@Service
 public class StockInfo implements IStockInfo {
 
     @Override
@@ -12,7 +16,8 @@ public class StockInfo implements IStockInfo {
         Stock stock;
         try {
             stock = YahooFinance.get(stockID);
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             throw new RuntimeException(e);
         }
 
