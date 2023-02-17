@@ -1,0 +1,15 @@
+<div class="input-group mb-3 search-field">
+  <input type="text" class="form-control" style="max-width: 20rem;">
+  <div class="input-group-append ">
+    <button class="btn btn-outline-secondary" type="button" style="margin-left: 0.5rem;">Search</button>
+  </div>
+</div>
+<div class="container row share-tileset">
+  <div *ngFor="let item of shares" class="col-sm-6 col-md-4 item" style="margin-top: 1rem">
+    <app-share-card>
+
+    </app-share-card>
+  </div>
+</div>
+
+
