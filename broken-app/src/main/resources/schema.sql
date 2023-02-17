@@ -9,7 +9,7 @@ CREATE TABLE shares
   sell_price BIGINT,
   sell_cost BIGINT,
 
-  user_id BIGINT FOREIGN KEY,
+  user_id BIGINT,
   currency VARCHAR (20)
 );
 
@@ -17,8 +17,7 @@ CREATE TABLE shares
 CREATE TABLE users
 (
   user_id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR (50),
-  surname VARCHAR (50),
   username VARCHAR (50),
-  password VARCHAR (50)
+  password VARCHAR (50),
+  enabled NUMERIC
 );
