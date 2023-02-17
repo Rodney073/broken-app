@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import bredex.brokenapp.model.ShareDTO;
-import bredex.brokenapp.services.api.ShareService;
+import bredex.brokenapp.services.api.IShareService;
 
 @RestController
 @RequestMapping("/share")
 public class ShareController {
 
     @Autowired
-    private ShareService service;
+    private IShareService service;
 
     @RequestMapping(method = RequestMethod.GET, value = "/{userId}")
     public List<ShareDTO> get(
