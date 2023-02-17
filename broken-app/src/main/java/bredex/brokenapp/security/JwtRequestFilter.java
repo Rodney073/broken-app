@@ -1,5 +1,6 @@
 package bredex.brokenapp.security;
 
+import bredex.brokenapp.services.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -20,7 +21,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 	private JwtAuthenticationService jwtAuthenticationService;
 
 	@Autowired
-	private hu.bme.aut.forumapplicationbackend.services.UserService userService;
+	private UserService userService;
 
 	@Autowired
 	private JwtTokenUtil jwtTokenUtil;

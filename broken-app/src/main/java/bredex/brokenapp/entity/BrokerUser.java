@@ -22,9 +22,6 @@ public class BrokerUser implements Serializable {
     @GeneratedValue
     @Column(name = "user_id")
     private Integer id;
-
-    private String name;
-    private String surname;
     private String username;
     private String password;
     private Boolean enabled;

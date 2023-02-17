@@ -1,5 +1,6 @@
 package bredex.brokenapp.security;
 
+import bredex.brokenapp.services.UserService;
 import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
@@ -16,7 +17,7 @@ import org.springframework.stereotype.Component;
 public class JwtAuthenticationService {
 
     @Autowired
-    private hu.bme.aut.forumapplicationbackend.services.UserService userService;
+    private UserService userService;
 
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
