@@ -14,7 +14,7 @@
 	<name>broken-app</name>
 	<description>Team HU Hackaton</description>
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -55,6 +55,11 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.yahoofinance-api</groupId>
+			<artifactId>YahooFinanceAPI</artifactId>
+			<version>3.17.0</version>
 		</dependency>
 	</dependencies>
 
