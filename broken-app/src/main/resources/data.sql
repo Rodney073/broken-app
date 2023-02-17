@@ -1,7 +1,7 @@
-INSERT INTO users (user_id, username, password) VALUES (101, 'Joe123', password);
-INSERT INTO users (user_id, username, password) VALUES (102, 'Jane123', password);
-INSERT INTO users (user_id, username, password) VALUES (103, 'DoeJ', password);
-INSERT INTO users (user_id, username, password) VALUES (104, 'Tim123', password);
+INSERT INTO users (user_id, username, password, enabled) VALUES (101, 'Joe123', password, 1);
+INSERT INTO users (user_id, username, password, enabled) VALUES (102, 'Jane123', password, 1);
+INSERT INTO users (user_id, username, password, enabled) VALUES (103, 'DoeJ', password, 1);
+INSERT INTO users (user_id, username, password, enabled) VALUES (104, 'Tim123', password, 1);
 
 
 INSERT INTO shares (share_id, buy_date, buy_price, buy_cost, sell_date, sell_price, sell_cost, user_id, currency) VALUES (101, TO_DATE('17/12/2015', 'DD/MM/YYYY'), 1000, 2000, TO_DATE('10/10/2018', 'DD/MM/YYYY'), 3000, 4000, 103, 'USD');
