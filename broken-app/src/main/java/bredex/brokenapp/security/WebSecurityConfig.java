@@ -49,7 +49,7 @@ public class WebSecurityConfig {
     @Bean
     public UserDetailsManager users(DataSource dataSource) {
         JdbcUserDetailsManager users = new JdbcUserDetailsManager(dataSource);
-        users.setUsersByUsernameQuery("select username, password, enabled from forumuser where username=?");
+        users.setUsersByUsernameQuery("SELECT username, password, enabled FROM brokeruser WHERE username=?");
         return users;
     }
 
