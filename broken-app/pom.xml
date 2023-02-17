@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>bredex</groupId>
-	<artifactId>broken-app</artifactId>
+	<artifactId>broken-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>broken-app</name>
 	<description>Team HU Hackaton</description>
