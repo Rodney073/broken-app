@@ -1,4 +1,4 @@
-package bredex.brokenapp.services;
+package bredex.brokenapp.services.stock;
 
 
 import java.util.Arrays;
@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import bredex.brokenapp.model.StockDTO;
 import bredex.brokenapp.model.StockId;
+import bredex.brokenapp.services.yahoo.IStockInfo;
 import yahoofinance.Stock;
 
 @Service

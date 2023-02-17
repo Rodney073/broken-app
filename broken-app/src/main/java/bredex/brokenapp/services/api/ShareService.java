@@ -1,4 +1,4 @@
-package bredex.brokenapp.services;
+package bredex.brokenapp.services.api;
 
 
 import java.util.List;
@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import bredex.brokenapp.dao.ShareDao;
 import bredex.brokenapp.entity.Share;
 import bredex.brokenapp.model.ShareDTO;
+import bredex.brokenapp.services.stock.IStockService;
 
 @Service
 public class ShareService implements IShareService {
@@ -18,7 +19,7 @@ public class ShareService implements IShareService {
     private ShareDao shareDao;
 
     @Autowired
-    StockService stockService;
+    IStockService stockService;
 
     @Override
     public List<ShareDTO> getShares(Integer userId) {

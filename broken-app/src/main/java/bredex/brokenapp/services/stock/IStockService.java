@@ -1,4 +1,4 @@
-package bredex.brokenapp.services;
+package bredex.brokenapp.services.stock;
 
 
 import java.util.List;

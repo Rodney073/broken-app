@@ -1,4 +1,4 @@
-package bredex.brokenapp.services;
+package bredex.brokenapp.services.yahoo;
 
 
 import yahoofinance.Stock;
