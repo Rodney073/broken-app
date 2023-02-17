@@ -21,8 +21,6 @@ public class Share implements Serializable {
     @GeneratedValue
     private long id;
 
-    private String stockId;
-    private String type;
     private Date buyDate;
     private Integer buyPrice;
     private Integer buyCost;
@@ -32,7 +30,7 @@ public class Share implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User user;
+    private Integer userId;
 
     @Enumerated(EnumType.STRING)
     private ShareCurrency currency;

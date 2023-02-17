@@ -1,10 +1,15 @@
 package bredex.brokenapp.services;
 
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import bredex.brokenapp.model.StockDTO;
+import bredex.brokenapp.model.StockId;
 import yahoofinance.Stock;
 
 @Service
@@ -14,15 +19,18 @@ public class StockService implements IStockService {
     private IStockInfo stockInfo;
 
     @Override
-    public StockDTO getStocks(String stockID) {
-        final Stock info = stockInfo.getStockInfo(stockID);
+    public List<StockDTO> getStocks() {
+        final List<String> stockIds = Arrays.stream(StockId.values()).map(StockId::getName).toList();
+        return stockIds.stream().map(s -> map(stockInfo.getStockInfo(s), s)).collect(Collectors.toList());
+    }
 
+    private StockDTO map(Stock stock, String id) {
         final StockDTO result = new StockDTO();
-        result.setId(stockID);
-        result.setName(info.getName());
-        result.setPrice(info.getQuote().getPrice());
-        result.setEarningPerShare(info.getStats().getEps());
-        result.setPriceToEarning(info.getStats().getPe());
+        result.setId(id);
+        result.setName(stock.getName());
+        result.setPrice(stock.getQuote().getPrice());
+        result.setEarningPerShare(stock.getStats().getEps());
+        result.setPriceToEarning(stock.getStats().getPe());
 
         return result;
     }

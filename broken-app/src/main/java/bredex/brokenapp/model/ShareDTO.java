@@ -13,8 +13,6 @@ import lombok.Setter;
 @Setter
 public class ShareDTO implements Serializable {
 
-    private String stockId;
-    private String type;
     private Date buyDate;
     private Integer buyPrice;
     private Integer buyCost;
