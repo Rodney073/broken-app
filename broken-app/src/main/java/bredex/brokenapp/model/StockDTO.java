@@ -8,8 +8,5 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class StockDTO implements Serializable {
-
-    private final String id;
-    private final String name;
+public record StockDTO(String id, String name) implements Serializable {
 }
