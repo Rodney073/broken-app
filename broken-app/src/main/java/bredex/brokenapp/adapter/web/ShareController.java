@@ -4,9 +4,11 @@ package bredex.brokenapp.adapter.web;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import bredex.brokenapp.model.ShareDTO;
@@ -17,12 +19,10 @@ import bredex.brokenapp.services.api.IShareService;
 public class ShareController {
 
     @Autowired
-    private IShareService service;
+    private IShareService shareService;
 
-    @RequestMapping(method = RequestMethod.GET, value = "/{userId}")
-    public List<ShareDTO> get(
-            @PathVariable("userId")
-            Integer userId) {
-        return service.getShares(userId);
+    @GetMapping("/{shareId}")
+    ResponseEntity<List<ShareDTO>> getShares(@PathVariable Integer shareId) {
+        return new ResponseEntity<>(shareService.getShares(shareId), HttpStatus.OK);
     }
 }
