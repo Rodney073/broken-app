@@ -11,10 +11,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Getter
-public class User implements Serializable {
+@Setter
+public class BrokerUser implements Serializable {
 
     @Id
     @GeneratedValue
@@ -25,6 +27,7 @@ public class User implements Serializable {
     private String surname;
     private String username;
     private String password;
+    private Boolean enabled;
 
     @OneToMany(mappedBy = "user")
     private final Set<Share> shares = new HashSet<>();
