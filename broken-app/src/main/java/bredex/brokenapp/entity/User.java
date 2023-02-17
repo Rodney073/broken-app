@@ -1,6 +1,8 @@
-package bredex.brokenapp.model;
+package bredex.brokenapp.entity;
 
 
+import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.persistence.Entity;
@@ -11,7 +13,7 @@ import lombok.Getter;
 
 @Entity
 @Getter
-public class User {
+public class User implements Serializable {
 
     @Id
     @GeneratedValue
@@ -22,6 +24,6 @@ public class User {
     private String username;
     private String password;
 
-    @OneToMany(mappedBy="user")
-    private Set<Share> shares;
+    @OneToMany(mappedBy = "user")
+    private final Set<Share> shares = new HashSet<>();
 }

@@ -1,4 +1,4 @@
-package bredex.brokenapp.model;
+package bredex.brokenapp.entity;
 
 
 public enum ShareCurrency {

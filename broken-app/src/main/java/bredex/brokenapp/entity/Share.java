@@ -1,4 +1,4 @@
-package bredex.brokenapp.model;
+package bredex.brokenapp.entity;
 
 
 import java.io.Serializable;
@@ -21,7 +21,7 @@ public class Share implements Serializable {
     @GeneratedValue
     private long id;
 
-    private Integer stockId;
+    private String stockId;
     private String type;
     private Date buyDate;
     private Integer buyPrice;
