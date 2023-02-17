@@ -21,8 +21,8 @@ public class ShareController {
     @Autowired
     private IShareService shareService;
 
-    @GetMapping("/{shareId}")
-    ResponseEntity<List<ShareDTO>> getShares(@PathVariable Integer shareId) {
-        return new ResponseEntity<>(shareService.getShares(shareId), HttpStatus.OK);
+    @GetMapping("/{userId}")
+    ResponseEntity<List<ShareDTO>> getShares(@PathVariable Integer userId) {
+        return new ResponseEntity<>(shareService.getShares(userId), HttpStatus.OK);
     }
 }
